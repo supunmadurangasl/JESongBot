@@ -9,22 +9,23 @@ from JESongBot import Jebot as app
 from JESongBot import LOGGER
 
 pm_start_text = """
-Heya [{}](tg://user?id={}), I'm Song Downloader Bot 🎵
-
+Hey There, [{}](tg://user?id={}), I'm Song Downloader Bot  🎶
+👨‍💻  created by- @Supunma
 Do /help for know my commands
 
-A bot by @Infinity_BOTs
+A bot by @slbotzone 
 """
 
 help_text = """
 My commands👇
+Send a song name to download song
 
 - /song <song name>: download songs via Youtube
 - /saavn <song name>: download songs via JioSaavn
 - /deezer <song name>: download songs via Deezer
 - Send youtube url to my pm for download it on audio format
 
-A bot by @Infinity_BOTs
+A bot by @slbotzone
 """
 
 @app.on_message(filters.command("start"))
@@ -37,10 +38,10 @@ async def start(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        text="Source", url="https://github.com/ImJanindu/JESongBot"
+                        text="📦Source", url="https://github.com/supunmadurangasl/songBot"
                     ),
                     InlineKeyboardButton(
-                        text="Dev", url="https://t.me/ImJanindu"
+                        text="👨‍💻 Dev", url="https://t.me/supunma"
                     )
                 ]
             ]
@@ -54,5 +55,5 @@ async def start(client, message):
     await message.reply(help_text)
 
 app.start()
-LOGGER.info("JESongBot is online.")
+LOGGER.info("SongBot is online.")
 idle()
